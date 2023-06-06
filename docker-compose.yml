@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    restart: always
+    ports:
+      - 80:80
+  app:
+    build:
+      context: .
+      dockerfile: app.dockerfile
+    restart: always
